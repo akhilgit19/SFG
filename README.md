@@ -10,7 +10,7 @@ password - password
 
 http://jau-dd7dff74eeb:50000/dashboard/portal
 
-Hello World Process:
+SI -Hello World Process:
 ----------------------
 Business processes
 - Manager
@@ -113,9 +113,32 @@ If you have the XML code  you  can do it without GPM.
 - click on info on
 
 
-
-
+SI -Session BP Activities
+----------------------
+- open cmd promt and run as administrator
+- cd cd:\SI Install\install\bin
+- stopWindowsService.cmd  ( to stop the sterling intergrator )(In unix you can use hardstop.cmd)
+- startWindowsService.cmd (it will take the back up of log files and preserve in archieve folder)
+- LOGS_Sat08_18_2018_12140 archive file of old logs
 - 
+
+
+- click on business process, click on monitor, clck on centeral search
+- In business process, give HelloWorld
+-  You will see 3 business process matches in sterling b2b integrator as we run 3 timeds yesterday
+-  
+
+If there is any issue, With the business process
+- click on monitor, click on advanced search, click on business process
+- process id -715018
+- click on 155018
+- you can see the assign servicess logss
+
+- 38:54
+
+
+
+
 1:44:05
 
 - Monitor
