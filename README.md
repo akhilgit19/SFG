@@ -10,6 +10,9 @@ password - password
 
 http://jau-dd7dff74eeb:50000/dashboard/portal
 
+
+
+TCS-XML-COLLECT THE FILE, CHECK IF XML, TRNSALTE THE DATE, RENAME THE FILE, SEND TO MAINFRAME
 SI -Hello World Process:
 ----------------------
 Business processes
@@ -81,12 +84,14 @@ Business processes
 
 - now, click on Manager, In process name- serach for Helloworld, you will see Batch3HeloWorld
 - click on source  manager
-- click on checkout and then click checkin go,
+- click on checkout, Click on on cancel and then click checkin go,
 -  file name- browse file name hellowworkld
 - Description second version
 - click on next, next next, chooser version ,click on next and click on finish
-- click on retun,clickk on exectue ,click on go
+- click on return,clickk on exectue manager and click on execute ,click on go
+- you can see now 2 assign statment in SI
 
+  
 Now the new business process has checked in SI 
 - now clic on view, click on source
 - you will se XML code that GPM has generated  for you
