@@ -123,7 +123,7 @@ If you have the XML code  you  can do it without GPM.
     append       false
     constant      
     from          /ProcessData/FirstSession/text()
-    to            yYY
+    to            YY
 - click on build , click on validate
 - click on file, click on save
 - click on view, click on  source copy the code
@@ -138,6 +138,8 @@ If you have the XML code  you  can do it without GPM.
         <assign to="FirstSession">HelloWorld</assign>
          <assign to="Jay">Good Batch</assign>
          <assign to="YY" from ="/ProcessData/FirstSession/text()"></assign>
+           or
+         <assign to="YY" from ="FirstSession"></assign>
       </sequence>
    </process>
 - click on validate, click ok, click on finish, click on return, click on execution manager
@@ -150,6 +152,15 @@ If you have the XML code  you  can do it without GPM.
      <yy>HelloWorld</yy>                
   </ProcessData>
 
+  or
+  
+  <ProcessData>
+    <FirstSession>HelloWorld</FirstSession>
+    <Jay>GoodBatch</Jay>
+     <yy>
+        <FirstSession>HelloWorld</FirstSession>
+     </yy>                
+  </ProcessData>
 
 - click on same  assign and double click, it will paramaeters to configure the activity
     Name         value
@@ -212,32 +223,36 @@ start --sequence-start-- assign- choice start- sequence start --- assign --seque
 
 - click on tools, click on rule manager
 - click on add
-- Name- Ordertype, click on expression
-- Expression - orderTupe/text()='webOrder'
+- Name- OrderType, click on expression
+- Expression - OrderType/text()='webOrder'
 - click on ok,ok select ordertype,click on okay
 - selct the arrrow which is linking choice start and sequence start
-- value webOrderFound
-- click on add
+-  click on add
+- give value webOrder
 
 choice start:
 ----------------
 add another sequence start --- assign --sequence end
 
-start --sequence-start-- assign- choice start- sequence start --- assign --sequence end- choice end- sequence end- end
-                                            |                                               |
-                                              sequence start --- assign --sequence end---
+start --sequence-start-- assign- choice start--- weborder --- assign --sequence end- choice end- sequence end- end
+                          OrderType   ------|                                               |
+                                             --- Other type orders --- assign --sequence end---
 
                                               
 - selct the arrrow which is linking choice start and sequence start
 - name        value
 Ordertype     true
 
+- selct the arrrow which is linking choice start and sequence start
+- name        value
+Ordertype     false
+
 - click on same  assign and double click, it will paramaeters to configure the activity
     Name         value
     append       false
     constant      This is not web order
     from          
-    to            Found
+    to            NotFound
 
 
 - click on build , click on validate
