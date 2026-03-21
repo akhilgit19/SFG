@@ -261,6 +261,7 @@ Ordertype     true
 - click on go
 - click on info on
 
+
 SI -Session BP Activities
 ----------------------
 - open cmd promt and run as administrator
@@ -270,16 +271,20 @@ SI -Session BP Activities
 - LOGS_Sat08_18_2018_12140 archive file of old logs
 - 
 
-
+Business process ID
+---------------------
 - click on business process, click on monitor, clck on centeral search
 - In business process, give HelloWorld
 -  You will see 3 business process matches in sterling b2b integrator as we run 3 timeds yesterday
 -  
 
+- click on monitor, click on current process
+- you can see all business process with id
+
 If there is any issue, With the business process
 - click on monitor, click on advanced search, click on business process
 - process id -715018
-- click on 155018
+- click on 715018
 - you can see the assign servicess logss
 
 - variable is create inside the processdaya
