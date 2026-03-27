@@ -422,3 +422,68 @@ click on monitor, click on advanced search, click on business process
 
 
   34:26
+  
+
+                                      - seqstart-- assign- sequenceend- 
+
+start   -- sequence start --all start -seqstart  - assign- sequenceend-   allend--sequebcebd-end
+
+                                       -seqstart -assign- sequenceend- 
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant     firstflow
+    from          
+    to             x1
+- click on file, click on save
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant     secondflow
+    from          
+    to             x2
+- click on file, click on save
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant     thirdflow
+    from          
+    to             x3
+-
+-  click on file, click on save
+
+
+
+  -  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant     At the End
+    from          
+    to             lastAssign
+-
+-  click on file, click on save
+
+
+<process name  ="ALLstartALL end"?
+<seq>
+  <all>
+    <seq>
+      <assing to ="x1">1111</assug>
+    </seq>
+      <seq>
+      <assing to ="x1">2222</assug>
+    </seq>
+   <seq>
+      <assing to ="x1">3333</assug>
+    </seq>
+ </all>
+ <assunbg to "lastassing">at the nd<a/assiung>
+ </seq>
+</process>
+
+    
