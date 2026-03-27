@@ -309,12 +309,6 @@ If there is any issue, With the business process
   </ProcessData>
 
   
-
-
-
-
-1:44:05
-
 - Monitor
 - Message Entry Workstation
 - Trading partner
@@ -327,3 +321,104 @@ If there is any issue, With the business process
 - Standards
 - Extended Rule Libraries
 - 
+
+
+
+
+
+Session3_ Activities On Fault Loop All start ALL
+=================================================
+
+- click on Business processes
+- click on Manager,click on go near run graphical process modeler ,click on ok
+- it will install grphical process modular , click on close, click on okay, user credentials
+-  Graphic Process modular will open
+-  click one view, click on stencil- click on BPML
+-  click on file , click on new
+-  click on start , drag it and put it in the white page
+-  click on sequence start ,drag it and put it in the white page
+-  connect the dots between the points from to start  to sequence start
+-  click on sequence end ,drag it and put it in the white page
+
+
+START - Sequentstart- assign-choicstart-sequencestart-assing- repeat-sequence end - choicend- squence end- end
+
+- click on tools, click on rule manager
+- click on add
+- Name- testLoop, click on expression
+- Expression - x/text()<5 
+- click on ok,ok select ordertype,click on okay
+- selct the arrrow which is linking choice start and sequence start
+-  click on add
+- give name testloop
+
+
+- selct first choice 
+- name        value
+Ordertype     looptest?
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant      0
+    from          
+    to             x
+- click on file, click on save
+
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant      
+    from           x+1
+    to             x
+- click on file, click on save
+
+
+
+-  click on repeat and double click, it will paramaeters to configure the activity
+   Name      value
+   ref       looptest?
+   
+- click on file, click on save
+
+
+
+
+- click on build , click on validate
+- click on file, click on save as DecisionBP
+- click on view, click on  source copy the code
+- 
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: looptest
+       check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for Helloworld, you will see looptest
+- click on execute
+- click on go
+-
+
+click on monitor, click on advanced search, click on business process
+- process id -715018
+- click on 715018
+- you can see the assign servicess logss
+
+- variable is create inside the processdaya
+  <ProcessData>
+    <FirstSession>HelloWorld</FirstSession>
+    <Jay>GoodBatch</Jay>
+  </ProcessData>
+
+
+
+  34:26
