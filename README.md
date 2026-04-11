@@ -486,4 +486,54 @@ start   -- sequence start --all start -seqstart  - assign- sequenceend-   allend
  </seq>
 </process>
 
-    
+
+
+
+In other case- Error handling:
+-
+- click on view, click on stencil, click on applications, click on all services
+
+- start -sequence start -file system adapter -assign- sequence end- end
+                        -Onfaultgroup
+                                         onfault start- sequence start- assign- sequence stop- enonfault end
+  
+- click on file system adapter
+  Name- file system adapter
+  config- AS3FSAdapter
+
+  Message to Service  Messsage from servcie
+
+  click on Message to service
+
+  output Msg
+  Message name
+
+ name                 value        usxpath          append
+ action             collection
+ cllectionfolder    c:/test/
+ bootstrap           no
+ collectionmultiple  no
+ deleteafter collect no
+ filter              abc.txt
+
+
+
+   -  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant     this will run after FSA
+    from          
+    to             lastAssign
+-
+-  click on file, click on save
+
+
+
+   -  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant     this will run if fsa failed
+    from          
+    to             onfault
+-
+-  click on file, click on save
