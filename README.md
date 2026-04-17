@@ -537,3 +537,8 @@ In other case- Error handling:
     to             onfault
 -
 -  click on file, click on save
+
+
+
+Session 4 Doc TO DOM DOM TO DOC BP persistance
+===============================================
