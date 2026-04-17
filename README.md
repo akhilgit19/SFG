@@ -542,3 +542,111 @@ In other case- Error handling:
 
 Session 4 Doc TO DOM DOM TO DOC BP persistance
 ===============================================
+
+
+
+- click on Business processes
+- click on Manager,click on go near run graphical process modeler ,click on ok
+- it will install grphical process modular , click on close, click on okay, user credentials
+-  Graphic Process modular will open
+-  click one view, click on stencil- click on BPML
+-  click on file , click on new
+-  click on start , drag it and put it in the white page
+-  click on sequence start ,drag it and put it in the white page
+-  connect the dots between the points from to start  to sequence start
+-  click on sequence end ,drag it and put it in the white page
+
+START----- Sequence start------ assign-------assign------Sequence end---- End
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant      55
+    from          
+    to             x
+- click on file, click on save
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant      
+    from          PrimaryDocument/@SCIObjectID
+    to             Document1
+- click on file, click on save
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          PrimaryDocument/@SCIObjectID
+    to             x2
+- click on file, click on save
+
+
+- click on build , click on validate
+- click on file, click on save as PrimaryDocument
+- click on view, click on  source copy the code
+- 
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: PrimaryDocument
+        check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for PrimaryDocument, click on executiion manager
+- 
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant      
+    from          PrimaryDocument/@SCIObjectID
+    to             Document1
+- click on file, click on save
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          PrimaryDocument/@SCIObjectID
+    to             x2
+- click on file, click on save
+
+- click on build , click on validate
+- click on file, click on save as PrimaryDocument
+- click on view, click on  source copy the code
+
+- 
+- now go to click on Manager, In process name- serach for PrimaryDocument,
+- click on source manager
+- click on edit
+- short description
+- paste the xml code
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+  <Process name "defailt >
+    <sequence>
+     
+      <assign to= "Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"></assin>
+      <assign to "x2" from=" PrimaryDocument/@SCIObjectID"></assign>
+      
+    </sequence>
+  </Process>
