@@ -556,7 +556,7 @@ Session 4 Doc TO DOM DOM TO DOC BP persistance
 -  connect the dots between the points from to start  to sequence start
 -  click on sequence end ,drag it and put it in the white page
 
-START----- Sequence start------ assign-------assign------Sequence end---- End
+START----- Sequence start------ assign-------assign----assign----Sequence end---- End
 
 
 -  click on assign and double click, it will paramaeters to configure the activity
@@ -568,22 +568,6 @@ START----- Sequence start------ assign-------assign------Sequence end---- End
 - click on file, click on save
 
 
--  click on assign and double click, it will paramaeters to configure the activity
-    Name         value
-    append       false
-    constant      
-    from          PrimaryDocument/@SCIObjectID
-    to             Document1
-- click on file, click on save
-
-
--  click on assign and double click, it will paramaeters to configure the activity
-    Name         value
-    append       false
-    constant       
-    from          PrimaryDocument/@SCIObjectID
-    to             x2
-- click on file, click on save
 
 
 - click on build , click on validate
@@ -608,6 +592,10 @@ If you have the XML code  you  can do it without GPM.
 - click on browse, add your test.xml code from your computer
 - click on go
 -
+  <?xml version="1.0" encoding="UTF-8"?>
+  <ProcessData>
+    <PrimaryDocument>SCIObjectID ="AJFJADFJAJFAJJAJJAJ> </PrimaryDocument> 
+  </ProcessData>
 
 
 
@@ -632,7 +620,35 @@ If you have the XML code  you  can do it without GPM.
 - click on file, click on save as PrimaryDocument
 - click on view, click on  source copy the code
 
+  <Process name "defailt >
+    <sequence>
+     
+      <assign to= "Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"></assin>
+      <assign to "x2" from=" PrimaryDocument/@SCIObjectID"></assign>
+      
+    </sequence>
+  </Process>
+
+
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: PrimaryDocument
+        check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for PrimaryDocument, click on executiion manager
 - 
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
 - now go to click on Manager, In process name- serach for PrimaryDocument,
 - click on source manager
 - click on edit
@@ -642,11 +658,325 @@ If you have the XML code  you  can do it without GPM.
 - click on browse, add your test.xml code from your computer
 - click on go
 -
-  <Process name "defailt >
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+  <ProcessData>
+    <PrimaryDocument>SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/> 
+     <Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"/>
+     <x2 SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/
+  </ProcessData>
+
+
+
+Now if you have this order file
+--------------------------------------
+<order>
+  <orderType>web</orderType></orderType>
+  <itemName>12223</itemName>
+  <userName>JP</userName>
+</order>
+
+
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          DocToDom(PrimaryDocument)
+    to             .
+- click on file, click on save
+
+- click on build , click on validate
+- click on file, click on save as PrimaryDocument
+- click on view, click on  source copy the code
+
+
+ <Process name "defailt >
     <sequence>
      
       <assign to= "Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"></assin>
       <assign to "x2" from=" PrimaryDocument/@SCIObjectID"></assign>
-      
+       <assign to "." from=" DocToDom(PrimaryDocument)"></assign>
     </sequence>
   </Process>
+
+
+
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: PrimaryDocument
+        check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for PrimaryDocument, click on executiion manager
+- 
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+- now go to click on Manager, In process name- serach for PrimaryDocument,
+- click on source manager
+- click on edit
+- short description
+- paste the xml code
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+  <ProcessData>
+    <PrimaryDocument>SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/> 
+     <Docuemnt1" SCIObjectID ="AJFJADFJAJFAJJAJJAJ"//>
+     <x2 SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/
+   <order>
+  <orderType>web</orderType></orderType>
+  <itemName>12223</itemName>
+  <userName>JP</userName>
+  </order>
+  </ProcessData>
+
+
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          DocToDom(PrimaryDocument/ordetType/text()
+    to            XMLOrderType
+- click on file, click on save
+
+- click on build , click on validate
+- click on file, click on save as PrimaryDocument
+- click on view, click on  source copy the code
+
+
+ <Process name "defailt >
+    <sequence>
+     
+      <assign to= "Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"></assin>
+      <assign to "x2" from=" PrimaryDocument/@SCIObjectID"></assign>
+       <assign to "." from=" DocToDom(PrimaryDocument/ordetType/text())"></assign>
+    </sequence>
+  </Process>
+
+
+
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: PrimaryDocument
+        check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for PrimaryDocument, click on executiion manager
+- 
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+- now go to click on Manager, In process name- serach for PrimaryDocument,
+- click on source manager
+- click on edit
+- short description
+- paste the xml code
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+  <ProcessData>
+    <PrimaryDocument>SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/> 
+     <Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"/>
+     <x2 SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/
+     <XMLOrderTypew>web</XMLOrderTypew>
+  </ProcessData>
+
+
+
+
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          DocToDom(Document1)
+    to            XMLOrderType
+- click on file, click on save
+
+- click on build , click on validate
+- click on file, click on save as PrimaryDocument
+- click on view, click on  source copy the code
+
+
+ <Process name "defailt >
+    <sequence>
+     
+      <assign to= "Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"></assin>
+      <assign to "x2" from=" PrimaryDocument/@SCIObjectID"></assign>
+       <assign to "XMLOrderType" from=" DocToDom(Document1)"></assign>
+    </sequence>
+  </Process>
+
+
+
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: PrimaryDocument
+        check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for PrimaryDocument, click on executiion manager
+- 
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+- now go to click on Manager, In process name- serach for PrimaryDocument,
+- click on source manager
+- click on edit
+- short description
+- paste the xml code
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+  <ProcessData>
+    <PrimaryDocument>SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/> 
+     <Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"/>
+     <x2 SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/
+     <XMLOrderTypew>
+    <order>
+  <orderType>web</orderType></orderType>
+  <itemName>12223</itemName>
+  <userName>JP</userName>
+  </order>
+     </XMLOrderTypew>
+  </ProcessData>
+
+
+
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          DomTodOC(ProcessData)
+    to            test
+- click on file, click on save
+
+- click on build , click on validate
+- click on file, click on save as PrimaryDocument
+- click on view, click on  source copy the code
+
+
+ <Process name "defailt >
+    <sequence>
+     
+      <assign to= "Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"></assin>
+      <assign to "x2" from=" PrimaryDocument/@SCIObjectID"></assign>
+       <assign to "test" from=" DocToDom(ProcessData)"></assign>
+    </sequence>
+  </Process>
+
+
+
+If you have the XML code  you  can do it without GPM.
+==============================================================
+- now, click on Manager,click on go near  process definition
+  Process Name
+- Name: PrimaryDocument
+        check in business process created by the graphical modeling tool
+ choose Business process texteditor
+- click on next
+- Description- Give your descript
+  business process- here copy paste your xml code
+- click on next, next, next, nextclick on finish
+
+- now, click on Manager, In process name- serach for PrimaryDocument, click on executiion manager
+- 
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+- now go to click on Manager, In process name- serach for PrimaryDocument,
+- click on source manager
+- click on edit
+- short description
+- paste the xml code
+- click on execute
+- click on browse, add your test.xml code from your computer
+- click on go
+-
+
+
+- you will see everything what is inside the process data
+
+    <?xml version="1.0" encoding="UTF-8"?>
+  <PrimaryDocument>SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/> 
+     <Docuemnt1" from =" PrimaryDocument/@SCIOjbectID"/>
+     <x2 SCIObjectID ="AJFJADFJAJFAJJAJJAJ"/
+     <XMLOrderTypew>
+    <order>
+  <orderType>web</orderType></orderType>
+  <itemName>12223</itemName>
+  <userName>JP</userName>
+  </order>
+     </XMLOrderTypew>
+
+
+
+shortcut do as above only 
+
+-  click on assign and double click, it will paramaeters to configure the activity
+    Name         value
+    append       false
+    constant       
+    from          DomTodOC(ProcessData/XMLOrderType/Order)
+    to            test
+- click on file, click on save
+
+
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <orderType>web</orderType></orderType>
+  <itemName>12223</itemName>
+  <userName>JP</userName>
+
+
+  1:29:50
